@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>fisa nr.4</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h3><b>Inregistrare:</b></h3>
+    <form action="https://sheetdb.io/api/v1/hegmc6y6rxyr3" method="POST" id="formular">
+        <fieldset>
+            <label for="nume">Nume:</label><br>
+            <input type="text" name="data[name]" id="nume" placeholder="Numele" size="40" required><br><br>
+            <label for="prenum">Prenume:</label><br>
+            <input type="text" name="data[prenum]" id="prenum" placeholder="Prenumele" size="40" required><br><br>
+            <label for="telefon">Telefon:</label><br>
+            <input type="tel" name="data[telefon]" id="telefon" placeholder="Telefon" size="40"><br><br>
+            <label>Clasa:</label><br>
+            <select name="data[clasa]">
+                <option value="V">V</option>
+                <option value="VI">VI</option>
+                <option value="VII">VII</option>
+                <option value="VIII">VIII</option>
+                <option value="IX">IX</option>
+                <option value="X">X</option>
+                <option value="XI">XI</option>
+                <option value="XII">XII</option>
+            </select><br><br>
+            <label for="curs1">Cursul:</label><br>
+            <input name="data[curs1]" id="curs1" type="checkbox" value="Dezvoltarea web">
+            <label for="curs2">Dezvoltarea web</label><br>
+            <input name="data[curs2]" id="curs2" type="checkbox" value="Aplicatii Mobile">
+            <label for="curs3">Aplicatii Mobile</label><br>
+            <input name="data[curs3]" id="curs3" type="checkbox" value="Programarea C/C++">
+            <label>Programarea C/C++</label><br><br>
+            <input class="button" type="submit" value="Inregistrare"><br><br>
+        </fieldset>
+    </form>
+    <script>
+        var form = document.getElementById('formular');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("formular")),
+            }).then(() => {
+                alert("Multumesc !");
+                form.reset();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

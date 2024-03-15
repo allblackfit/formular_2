@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+body {
+    background-color: rgb(241, 214, 251);
+    padding: 50px;
+    margin-left: 30%;
+}
+
+h3{   font-family: 'Zilla Slab', serif;
+    margin-left: 80px;
+    font-size:25px;
+}
+fieldset {
+    border-color:black;
+    border-width: 2px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.button {
+    width: 295px;
+    background-repeat: rgb(203, 201, 201);
+    font-family: 'Open Sans', sans-serif;
+    font-size:15px;
+    font-weight:bold;
+}
+
+label {
+    font-family: 'Inconsolata', monospace;}
+
+input {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+}
